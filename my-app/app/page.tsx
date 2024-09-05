@@ -1,4 +1,13 @@
-// `app/page.tsx` is the UI for the `/` URL
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Page() {
-  return <h1>Hello, Home page!</h1>;
+  const router = useRouter();
+
+  return (
+    <button type="button" onClick={() => router.push("/dashboard")}>
+      Dashboard
+    </button>
+  );
 }
